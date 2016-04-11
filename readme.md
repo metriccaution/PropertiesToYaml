@@ -1,0 +1,1 @@
+A quick tool to turn a .properties file into YAML.
