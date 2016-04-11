@@ -46,12 +46,9 @@ public class ParseTest {
 				new Property(props).toJsonNode()));
 	}
 
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void nodeWithProps() throws IOException {
-		// TODO - Fails because it should
-		// final Properties props =
-		// readTestFile("nodeWithProperties.properties");
-		// System.out.println(Utils.mapper().writeValueAsString(
-		// new Property(props).toJsonNode()));
+		final Properties props = readTestFile("nodeWithProperties.properties");
+		new Property(props).toJsonNode();
 	}
 }
