@@ -41,7 +41,7 @@ public class Property {
 		children = null;
 	}
 
-	public void addProperty(final String key, final Object value) {
+	private void addProperty(final String key, final Object value) {
 		if (value == null)
 			throw new NullPointerException("Appending null property to model");
 

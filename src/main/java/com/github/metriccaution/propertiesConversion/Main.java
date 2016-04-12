@@ -14,6 +14,10 @@ public class Main {
 
 		final String yamlString = Utils.mapper().writeValueAsString(
 				parsed.toJsonNode());
-		System.out.println(yamlString);
+
+		final String quotesRemoved = yamlString.replaceAll(": \"", ":")
+				.replaceAll("\\s*\"", "");
+
+		System.out.println(quotesRemoved);
 	}
 }
